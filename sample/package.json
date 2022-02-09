@@ -1,8 +1,8 @@
 {
-  "name": "sample",
+  "name": "postgres",
   "version": "0.0.0",
   "private": true,
-  "description": "Description for sample",
+  "description": "Description for postgres",
   "license": "UNLICENSED",
   "scripts": {
     "app:start": "./mvnw",
