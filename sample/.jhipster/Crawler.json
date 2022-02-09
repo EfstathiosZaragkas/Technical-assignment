@@ -1,0 +1,27 @@
+{
+  "changelogDate": "20220205162600",
+  "clientRootFolder": "postgres",
+  "databaseType": "sql",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fetch",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "source",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "postgres",
+  "name": "Crawler",
+  "pagination": "infinite-scroll",
+  "readOnly": true,
+  "relationships": [],
+  "service": "serviceImpl"
+}
