@@ -10,7 +10,7 @@
         Added the entity Crawler.
     -->
     <changeSet id="20220205162600-1" author="jhipster">
-        <createTable tableName="crawler">
+        <createTable tableName="Crawler">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -41,7 +41,7 @@
         <loadData
                   file="config/liquibase/fake-data/crawler.csv"
                   separator=";"
-                  tableName="crawler"
+                  tableName="Crawler"
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="name" type="string"/>
