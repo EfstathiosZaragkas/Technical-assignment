@@ -9,6 +9,6 @@ import org.mapstruct.*;
  */
 @Mapper(componentModel = "spring", uses = { CrawlerMapper.class })
 public interface FilterMapper extends EntityMapper<FilterDTO, Filter> {
-    @Mapping(target = "crawler", source = "crawler", qualifiedByName = "id")
+    @Mapping(target = "crawler", source = "crawler")
     FilterDTO toDto(Filter s);
 }
