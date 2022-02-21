@@ -22,6 +22,13 @@
   "name": "Crawler",
   "pagination": "infinite-scroll",
   "readOnly": true,
-  "relationships": [],
+  "relationships": [
+    {
+      "otherEntityName": "filter",
+      "otherEntityRelationshipName": "crawler",
+      "relationshipName": "filter",
+      "relationshipType": "one-to-many"
+    }
+  ],
   "service": "serviceImpl"
 }

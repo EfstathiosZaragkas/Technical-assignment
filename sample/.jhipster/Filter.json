@@ -1,0 +1,21 @@
+{
+  "changelogDate": "20220221120012",
+  "clientRootFolder": "postgres",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "postgres",
+  "name": "Filter",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "crawler",
+      "relationshipName": "crawler",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
