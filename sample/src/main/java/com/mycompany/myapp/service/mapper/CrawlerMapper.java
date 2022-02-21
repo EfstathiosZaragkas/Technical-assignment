@@ -1,4 +1,4 @@
 package com.mycompany.myapp.service.mapper;
 
-public class CrawlerMapper {
+public interface CrawlerMapper {
 }
