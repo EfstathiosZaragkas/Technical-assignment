@@ -1,6 +1,5 @@
 package com.mycompany.myapp.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import javax.persistence.*;
 
@@ -20,7 +19,6 @@ public class Filter implements Serializable {
     private Long id;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "filters" }, allowSetters = true)
     private Crawler crawler;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

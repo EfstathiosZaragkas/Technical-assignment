@@ -8,10 +8,10 @@
     -->
     <changeSet id="20220205162600-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="filter_id"
+        <addForeignKeyConstraint baseColumnNames="crawler_id"
                                  baseTableName="crawler"
-                                 constraintName="fk_crawler__filter_id"
+                                 constraintName="fk_crawler__crawler_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="filter"/>
+                                 referencedTableName="crawler"/>
     </changeSet>
 </databaseChangeLog>
