@@ -13,12 +13,22 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+eureka:
+  client:
+    enabled: false
+  instance:
+    appname: sample
+    instanceId: sample:${spring.application.instance-id:${random.value}}
+
 spring:
   application:
-    name: postgres
+    name: sample
+  cloud:
+    config:
+      enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:postgres;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:sample;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:
@@ -58,13 +68,13 @@ spring:
     basename: i18n/messages
   task:
     execution:
-      thread-name-prefix: postgres-task-
+      thread-name-prefix: sample-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: postgres-scheduling-
+      thread-name-prefix: sample-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -89,7 +99,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'postgresApp'
+    name: 'sampleApp'
   logging:
     # To test json console appender
     use-json-format: false

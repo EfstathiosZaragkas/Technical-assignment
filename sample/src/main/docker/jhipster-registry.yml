@@ -1,32 +1,6 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
 version: '3.8'
 services:
-  sample-app:
-    image: sample
-    environment:
-      - _JAVA_OPTIONS=-Xmx512m -Xms256m
-      - SPRING_PROFILES_ACTIVE=prod,api-docs
-      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
-      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
-      - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://sample-postgresql:5432/sample
-      - SPRING_LIQUIBASE_URL=jdbc:postgresql://sample-postgresql:5432/sample
-      - SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_ISSUER_URI=http://keycloak:9080/auth/realms/jhipster
-      - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID=internal
-      - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET=internal
-      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
-  sample-postgresql:
-    image: postgres:14.1
-    # volumes:
-    #   - ~/volumes/jhipster/sample/postgresql/:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=sample
-      - POSTGRES_PASSWORD=
-      - POSTGRES_HOST_AUTH_METHOD=trust
-    # If you want to expose these ports outside your dev PC,
-    # remove the "127.0.0.1:" prefix
-    ports:
-      - 127.0.0.1:5432:5432
   jhipster-registry:
     image: jhipster/jhipster-registry:v7.2.0
     volumes:
@@ -36,7 +10,6 @@ services:
     # When run with the "prod" Spring profile, it will read the configuration from a Git repository
     # See https://www.jhipster.tech/jhipster-registry/#spring-cloud-config
     environment:
-      - JHIPSTER_SLEEP=20
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=dev,api-docs,oauth2
       - SPRING_SECURITY_USER_PASSWORD=admin
