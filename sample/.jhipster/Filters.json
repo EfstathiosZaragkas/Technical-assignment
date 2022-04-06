@@ -1,0 +1,21 @@
+{
+  "changelogDate": "20220330141608",
+  "clientRootFolder": "sample",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [],
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "sample",
+  "name": "Filters",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "crawler",
+      "relationshipName": "crawler",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
